@@ -5,28 +5,11 @@
 
     var mainApp = angular.module('mainApp', [
       'ngRoute',
-      'homeControllers'
-   ]);
-
-    mainApp.config(['$routeProvider',
-      function($routeProvider) {
-         $routeProvider.
-          when('/', {
-            templateUrl: '/views/pages/home.ejs',
-            controller: 'HomeCtrl'
-          }).
-          otherwise({
-            redirectTo: '/'
-          });
-      }]);
-
-    var pollsApp = angular.module('pollsApp', [
-      'ngRoute',
       'homeControllers',
       'pollsControllers'
     ]);
 
-    pollsApp.config(['$routeProvider',
+    mainApp.config(['$routeProvider',
       function($routeProvider) {
         $routeProvider.
           when('/', {
@@ -57,4 +40,4 @@
             redirectTo: '/'
           });
       }]);
-}())
+}());
