@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../partials/header.ejs %>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/site.css" />
+</head>
+
+<body>
+
+   <% include ../partials/nav.ejs %>
+
+<div ng-app="mainApp" ng-controller="HomeCtrl">
+   <h1>{{author}}'s Homepage</h1>
+   <p>Hi! I hope you have found my webpage well.</p>
+   <p>This is a personal project I have for improving my web development skills.</p>
+   <p>You will find a variety of my projects and more about me by navigating throughout my website.</p>
+   <br>
+   <p>If you wish to contact me for questions, please email me at: {{email}}</p>
+<div>
+
+</body>
+</html>

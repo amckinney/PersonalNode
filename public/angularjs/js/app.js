@@ -3,42 +3,58 @@
 
     /* App Module */
 
+    var mainApp = angular.module('mainApp', [
+      'ngRoute',
+      'homeControllers'
+   ]);
+
+    mainApp.config(['$routeProvider',
+      function($routeProvider) {
+         $routeProvider.
+          when('/', {
+            templateUrl: '/views/pages/home.ejs',
+            controller: 'HomeCtrl'
+          }).
+          otherwise({
+            redirectTo: '/'
+          });
+      }]);
+
     var pollsApp = angular.module('pollsApp', [
       'ngRoute',
-      'homeControllers'//,
-      //'pollsControllers'
+      'homeControllers',
+      'pollsControllers'
     ]);
 
     pollsApp.config(['$routeProvider',
       function($routeProvider) {
         $routeProvider.
-          when('/home', {
-            templateUrl: 'angularjs/partials/home.html',
+          when('/', {
+            templateUrl: '/views/pages/home.ejs',
             controller: 'HomeCtrl'
           }).
           when('/polls', {
-            templateUrl: 'angularjs/partials/poll-list.html',
+            templateUrl: '/views/pages/polls/poll-list.ejs',
             controller: 'PollListCtrl'
           }).
           when('/polls/create', {
-            templateUrl: 'angularjs/partials/poll-create.html',
+            templateUrl: '/views/pages/polls/poll-create.ejs',
             controller: 'PollCreateCtrl'
           }).
           when('/polls/:pollId', {
-            templateUrl: 'angularjs/partials/poll-detail.html',
+            templateUrl: '/views/pages/polls/poll-detail.ejs',
             controller: 'PollDetailCtrl'
           }).
-          when('/votes/:pollId', {
-            templateUrl: 'angularjs/partials/vote-detail.html',
+          when('/polls/votes/:pollId', {
+            templateUrl: '/views/pages/polls/vote-detail.ejs',
             controller: 'VoteDetailCtrl'
           }).
-          when('/about', {
-            templateUrl: 'angularjs/partials/about.html',
+          when('/polls/about', {
+            templateUrl: '/views/pages/polls/about.ejs',
             controller: 'AboutCtrl'
           }).
           otherwise({
-            redirectTo: '/home'
+            redirectTo: '/'
           });
       }]);
-
 }())
