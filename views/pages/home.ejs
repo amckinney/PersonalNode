@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <% include ../partials/header.ejs %>
-  <link rel="stylesheet" type="text/css" href="/stylesheets/site.css" />
-</head>
-
-<body>
-
-   <% include ../partials/nav.ejs %>
-
+<% include ../partials/header.ejs %>
 <div ng-app="mainApp" ng-controller="HomeCtrl">
    <h1>{{author}}'s Website</h1>
    <p>Hi! I hope you have found my webpage well.</p>
@@ -17,6 +7,4 @@
    <br>
    <p>If you wish to contact me for questions, please email me at: {{email}}</p>
 <div>
-
-</body>
-</html>
+<% include ../partials/footer.ejs %>

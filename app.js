@@ -17,6 +17,14 @@ app.get('/polls', function(req, res) {
    res.render('pages/polls/poll-list');
 });
 
+app.get('/polls/about', function(req, res) {
+   res.render('pages/polls/about');
+});
+
+app.get('/polls/create', function(req, res) {
+   res.render('pages/polls/poll-create');
+});
+
 app.listen(app.get('port'), function() {
    console.log('Node app is running on port', app.get('port'));
 });

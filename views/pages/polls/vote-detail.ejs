@@ -1,7 +1,11 @@
-<h1>Poll: <span>{{poll.name}}</span></h1>
-<table class='table'>
-    <tr ng-repeat="answer in answers">
-      <td>{{answer.description + ' -- ' + ' ' + answer.votes}}</td>
-    </tr>
-</table>
-<a class='btn btn-primary btn-sm' href="#/polls">Home</a>
+<% include ../../partials/header.ejs %>
+<div ng-app="mainApp" ng-controller="VoteDetailCtrl" align="center">
+   <h1>Poll: <span>{{poll.name}}</span></h1>
+   <table class='table'>
+       <tr ng-repeat="answer in answers">
+         <td>{{answer.description + ' -- ' + ' ' + answer.votes}}</td>
+       </tr>
+   </table>
+   <a class='btn btn-primary btn-sm' href="/polls">Home</a>
+</div>
+<% include ../../partials/footer.ejs %>

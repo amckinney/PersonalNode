@@ -84,7 +84,6 @@
     pollsControllers.controller('AboutCtrl', ['$scope',
         function ($scope) {
           $scope.author = 'Alex McKinney';
-          $scope.studId = '24993165';
           $scope.email = 'amckinney@berkeley.edu';
         }]);
 
