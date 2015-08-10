@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+var router = express.Router();
 
 app.set('port', (process.env.PORT || 5000));
 
@@ -9,22 +10,13 @@ app.use(express.static(__dirname + '/public'));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
-app.get('/', function(req, res) {
-   res.render('pages/home');
-});
-
-app.get('/polls', function(req, res) {
-   res.render('pages/polls/poll-list');
-});
-
-app.get('/polls/about', function(req, res) {
-   res.render('pages/polls/about');
-});
-
-app.get('/polls/create', function(req, res) {
-   res.render('pages/polls/poll-create');
-});
+var home = require('./routes/index');
+app.use('/', home);
+var polls = require('./routes/polls');
+app.use('/polls', polls);
 
 app.listen(app.get('port'), function() {
    console.log('Node app is running on port', app.get('port'));
 });
+
+module.exports = app;
