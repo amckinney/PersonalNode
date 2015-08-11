@@ -3,5 +3,5 @@
   "description": "A personal website expressing my interests and skills",
   "repository": "https://github.com/amckinney/PersonalNode",
   "logo": "http://node-js-sample.herokuapp.com/node.svg",
-  "keywords": ["node", "express", "static"]
+  "keywords": ["node", "express", "mongoose", "static"]
 }

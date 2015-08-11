@@ -4,6 +4,95 @@
    <p>Hi! I hope you have found my webpage well.</p>
    <p>This is a personal project I have for improving my web development skills.</p>
    <p>You will find a variety of my projects and more about me by navigating throughout my website.</p>
+   <br>
+   <div id="subTitle">
+      <h2>Interests</h2>
+   </div>
+   <div id="subSubTitle">
+      <h3>Books</h3>
+   </div>
+   <br>
+   <div id="wrapper">
+      <div class="bookImg">
+         <img class="img-responsive center-block" src="/images/wind-up.png"></img>
+      </div>
+      <div class="bookDetails">
+         <p class="left">
+            Haruki Murakami is my favorite author, and my favorite book of his
+            is the Wind-Up Bird Chronicle. He is famous for his magically realistic
+            stories, and he writes with beautiful imagery.
+         </p>
+         <p class="left">
+            Murakami is also an avid runner, which I can relate to. He runs a marathon
+            every year, and has even participated in the original marathon race from
+            Marathon to Athens. He recounts his running lifestyle in his memoir,
+            What I Talk About When I Talk About Running.
+         </p>
+         <p class="left">
+            Other books I have read by Murakami include:
+         </p>
+         <ul>
+            <li ng-repeat="book in murakamiTexts">{{book}}</li>
+         </ul>
+      </div>
+   </div>
+   <br>
+   <div id="wrapper">
+      <div class="bookImg">
+         <img class="img-responsive center-block" src="/images/brave-new-world.png"></img>
+      </div>
+      <div class="bookDetails">
+         <p class="left">
+            I first read Brave New World earlier this year, and it was my first exposure
+            to Aldous Huxley. A lot of my friends were forced to read it in high school,
+            so I thought that it would be worth a read - I was not disappointed.
+         </p>
+         <p class="left">
+            Huxley captures the essence of human progression with technology with a creative,
+            and frighteningly accurate, depiction of the future. People are only cocerned about
+            happiness and physical pleasure, indulging in a futurisitc drug, called Soma, that supposedly
+            has no consequences.
+         </p>
+         <p class="left">
+            The world that Huxley creates is becoming more and more relevant
+            as we progress through this technological era.
+         </p>
+         <p class="left">
+            Other similar Dystopian novels I like are:
+         </p>
+         <ul>
+            <li ng-repeat="book in dystopianNovels">{{book}}</li>
+         </ul>
+      </div>
+   </div>
+   <br>
+   <div id="wrapper">
+      <div class="bookImg">
+         <img class="img-responsive center-block" src="/images/zen.png"></img>
+      </div>
+      <div class="bookDetails">
+         <br>
+         <p class="left">
+            In short, Zen and the Art of Motorcycle Maintenance is the story of a man and his
+            son traveling around the nation on a motorcycle. There is much more to the story than
+            a simple father/son adventure, however. Throughout the story,
+            the narrator alternates between describing the present, which consists of
+            his motorcycle tour, and the past, which tells the story of another mysterious
+            character's philosophical pursuit. The book is praised for the philosophical values
+            it provides, and the father/son tale serves merely as a wrapper to the true content.
+         </p>
+         <p class="left">
+            The story is mostly nonfiction, detailing the author's own life. Robert Pirsig
+            is a genius, having scored a 170 on the IQ Exam, and his eloquent writing makes this fact
+            easily believable.
+         </p>
+         <p class="left">
+            Although dense, this book is a must read for anyone interested in passion,
+            academia, or philosophy.
+         </p>
+      </div>
+   </div>
+   <br>
    <p>If you wish to contact me for questions, please email me at <b>{{email}}</b></p>
-<div>
+</div>
 <% include ../partials/footer.ejs %>

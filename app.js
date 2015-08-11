@@ -1,16 +1,16 @@
 var express = require('express');
 var app = express();
 var router = express.Router();
-var mongoose = require('mongoose');
-
-var dbString = process.env.MONGOLAB_URI;
-mongoose.connect(dbString, function (err, res) {
-  if (err) {
-  console.log ('ERROR connecting to: ' + dbString + '. ' + err);
-  } else {
-  console.log ('Succeeded connected to: ' + dbString);
-  }
-});
+// var mongoose = require('mongoose');
+//
+// var dbString = process.env.MONGOLAB_URI;
+// mongoose.connect(dbString, function (err, res) {
+//   if (err) {
+//   console.log ('ERROR connecting to: ' + dbString + '. ' + err);
+//   } else {
+//   console.log ('Succeeded connected to: ' + dbString);
+//   }
+// });
 
 app.set('port', (process.env.PORT || 5000));
 
