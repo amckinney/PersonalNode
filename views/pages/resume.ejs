@@ -1,5 +1,31 @@
 <% include ../partials/resumeNav.ejs %>
 <div ng-app="mainApp" ng-controller="HomeCtrl">
    <h1>Curriculum Vitae</h1>
+   <br>
+   <div id="subTitle">
+      <h2>Education</h2>
+   </div>
+   <div id="subSubTitle">
+      <h3>University</h3>
+   </div>
+   <br>
+   <div>
+      <p>University of California, Berkeley</p>
+      <p>Computer Science & Applied Mathematics</p>
+      <p>2012 – Present<p>
+   </div>
+   <div id="subSubTitle">
+      <h3>Coursework</h3>
+   </div>
+   <br>
+   <div id="subSubSubTitle">
+      <h4>Computer Science</h4>
+   </div>
+   <br>
+   <div id="courseWrapper">
+      <ul>
+         <li ng-repeat="course in computerScienceCourses">{{course}}</li>
+      </ul>
+   </div>
 </div>
 <% include ../partials/footer.ejs %>

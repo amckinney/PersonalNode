@@ -24,6 +24,12 @@
             'A Clockwork Orange by Anthony Burgess'
          ];
 
+         // $scope.computerScienceCourses = [
+         //    'CS 61A - Structure and Interpretation of Computer Programs',
+         //    'CS 61B - Data Structures',
+         //    'CS 61C - Machine Structures'
+         // ]
+
    }]);
 
 }());

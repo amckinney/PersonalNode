@@ -5,6 +5,11 @@
    margin: 0 auto;
 }
 
+#courseWrapper {
+   text-align: left;
+   margin: 0 auto;
+}
+
 #subTitle {
    border-bottom: 5px solid #64706C;
    margin: 0 auto;
@@ -15,6 +20,12 @@
    border-bottom: 3px solid #C7AD88;
    margin: 0 auto;
    width: 300px;
+}
+
+#subSubSubTitle {
+   border-bottom: 2px solid #222;
+   margin: 0 auto;
+   width: 200px;
 }
 
 .bookImg {
@@ -49,6 +60,11 @@ h2 {
 
 h3 {
    color: #C7AD88;
+   text-align: center;
+}
+
+h4 {
+   color: #222;
    text-align: center;
 }
 
